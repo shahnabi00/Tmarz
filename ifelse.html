@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 40px;
+    padding: 12px 40px;
     background: #020408; 
     border-bottom: 1px solid #111827;
   }
@@ -46,8 +46,8 @@
     gap: 12px;
   }
   .header-logo-icon {
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
     background: var(--blue);
     color: var(--white);
     border-radius: 8px;
@@ -55,13 +55,13 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
   .header-logo-text {
     color: var(--white);
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
   }
@@ -78,17 +78,17 @@
   }
   .header-promo-text {
     color: #9CA3AF;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
   }
   .header-btn {
     background: var(--blue);
     color: var(--white);
     text-decoration: none;
-    padding: 10px 24px;
+    padding: 8px 20px;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -99,16 +99,16 @@
     transform: translateY(-1px);
   }
 
-  /* --- ADJUSTED PADDING HERE (Changed 70px to 25px) --- */
-  .hero { padding: 25px 20px 60px; text-align: center; }
-  .eyebrow-badge { display: inline-block; background: var(--blue); color: var(--white); font-size: 10px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; padding: 7px 14px; margin-bottom: 22px; border-radius: 3px; }
-  .hero-headline { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; line-height: 1.16; color: var(--white); max-width: 1000px; margin: 0 auto 22px; letter-spacing: -0.05em; }
-  .hero-sub { color: #F5F5F5; font-size: 18px; font-weight: 500; max-width: 900px; margin: 0 auto 40px; line-height: 1.75; }
+  /* --- HERO SECTION - SCALED DOWN SIZES --- */
+  .hero { padding: 15px 20px 30px; text-align: center; }
+  .eyebrow-badge { display: inline-block; background: var(--blue); color: var(--white); font-size: 9px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; padding: 6px 12px; margin-bottom: 12px; border-radius: 3px; }
+  .hero-headline { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: clamp(24px, 3.5vw, 42px); font-weight: 700; line-height: 1.16; color: var(--white); max-width: 900px; margin: 0 auto 12px; letter-spacing: -0.05em; }
+  .hero-sub { color: #F5F5F5; font-size: 14px; font-weight: 500; max-width: 800px; margin: 0 auto 20px; line-height: 1.6; }
 
   .video-wrap {
-    max-width: 860px;
-    margin: 0 auto 40px;
-    border-radius: 18px;
+    max-width: 760px;
+    margin: 0 auto 20px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid #1e293b;
     position: relative;
@@ -119,20 +119,20 @@
   .video-wrap iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: none; display: block; }
 
   .cta-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 18px; }
-  .chevrons { color: var(--blue-light); font-size: 18px; font-weight: 700; opacity: 0.65; display: flex; align-items: center;}
+  .chevrons { color: var(--blue-light); font-size: 16px; font-weight: 700; opacity: 0.65; display: flex; align-items: center;}
   
   .cta-btn { 
     display: inline-block; 
     background: var(--blue); 
     color: var(--white); 
     font-family: 'Inter', sans-serif; 
-    font-size: 15px; 
+    font-size: 14px; 
     font-weight: 800; 
-    letter-spacing: 1.5px; 
+    letter-spacing: 1.2px; 
     text-transform: uppercase; 
     text-decoration: none; 
     border: none; 
-    padding: 17px 36px; 
+    padding: 14px 28px; 
     cursor: pointer; 
     transition: background 0.2s, transform 0.15s; 
     border-radius: 6px; 
@@ -142,26 +142,25 @@
     line-height: 1.4;
   }
   .cta-btn:hover { background: var(--blue-light); transform: translateY(-2px); }
-  .cta-btn-large { padding: 18px 48px; }
+  .cta-btn-large { padding: 16px 36px; }
 
   .claimed-line { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: nowrap; white-space: nowrap; margin: 0 auto 24px; }
   .live-dot { width: 7px; height: 7px; background: #D63B3B; border-radius: 50%; flex-shrink: 0; animation: pulse 1.5s infinite; }
-  .claimed-count { font-weight: 900; font-size: 18px; color: var(--white); line-height: 1; flex-shrink: 0; }
-  .avatars { display: flex; align-items: center; width: 104px; min-width: 104px; flex: 0 0 104px; overflow: visible; }
-  .avatars img { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--navy-dark); box-shadow: 0 0 0 1px rgba(37,99,235,0.35); object-fit: cover; margin-left: -10px; flex-shrink: 0; }
+  .claimed-count { font-weight: 900; font-size: 16px; color: var(--white); line-height: 1; flex-shrink: 0; }
+  .avatars { display: flex; align-items: center; width: 90px; min-width: 90px; flex: 0 0 90px; overflow: visible; }
+  .avatars img { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--navy-dark); box-shadow: 0 0 0 1px rgba(37,99,235,0.35); object-fit: cover; margin-left: -10px; flex-shrink: 0; }
   .avatars img:first-child { margin-left: 0; }
-  .claimed-text { font-size: 14px; color: var(--white); line-height: 1; flex-shrink: 0; }
+  .claimed-text { font-size: 13px; color: var(--white); line-height: 1; flex-shrink: 0; }
 
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.55; transform: scale(0.82); } }
 
-  /* --- NEW PREMIUM URGENCY COMPONENT --- */
   .premium-urgency-card {
     max-width: 480px;
     margin: 0 auto;
     background: linear-gradient(145deg, rgba(13, 27, 42, 0.7), rgba(2, 6, 13, 0.9));
     border: 1px solid rgba(59, 130, 246, 0.25);
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: 12px;
+    padding: 18px 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, border-color 0.3s ease;
@@ -174,20 +173,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   .urgency-title {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     color: #94a3b8;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
   }
   .pulse-dot-cyan {
-    width: 8px; height: 8px; 
+    width: 6px; height: 6px; 
     background: #06b6d4; 
     border-radius: 50%;
     box-shadow: 0 0 10px #06b6d4; 
@@ -199,7 +198,7 @@
     100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); } 
   }
   .urgency-percent {
-    font-size: 18px; 
+    font-size: 16px; 
     font-weight: 900; 
     color: #fff;
     background: linear-gradient(90deg, #ffffff, #94a3b8);
@@ -209,11 +208,11 @@
   .smooth-progress-container {
     position: relative; 
     width: 100%; 
-    height: 10px; 
+    height: 8px; 
     background: #111827;
     border-radius: 10px; 
     overflow: hidden; 
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
   }
   .smooth-progress-bar {
@@ -237,7 +236,7 @@
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    padding-top: 16px; 
+    padding-top: 12px; 
     border-top: 1px solid rgba(255,255,255,0.06);
   }
   .spots-warning {
@@ -245,14 +244,14 @@
     align-items: center; 
     gap: 8px; 
     color: #f87171;
-    font-size: 13.5px; 
+    font-size: 12px; 
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-  .spots-warning svg { stroke: #f87171; }
-  .spots-warning strong { color: #fff; font-size: 15px; font-weight: 800; }
-  .time-updated { font-size: 12px; color: #64748b; font-weight: 500; }
+  .spots-warning svg { stroke: #f87171; width: 16px; height: 16px; }
+  .spots-warning strong { color: #fff; font-size: 14px; font-weight: 800; }
+  .time-updated { font-size: 11px; color: #64748b; font-weight: 500; }
 
   /* FEATURES */
   .features-section { position: relative; padding: 70px 20px 56px; background: rgba(2, 6, 13, 0.5); overflow: hidden; }
@@ -300,12 +299,11 @@
   .insight-social-proof .proof-avatars img:first-child { margin-left: 0; }
   .insight-social-proof .proof-text { font-size: 14px; color: var(--gray-light); }
 
-  /* ABOUT */
+  /* ABOUT - RESTRUCTURED */
   .about-section { padding: 80px 0; background: rgba(2, 6, 13, 0.4); }
   .about-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
   .about-inner > h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(40px, 5vw, 62px); font-weight: 900; color: var(--white); text-transform: uppercase; text-align: center; margin-bottom: 60px; letter-spacing: -0.02em; }
-  .about-grid { display: grid; grid-template-columns: 45% 55%; gap: 0; align-items: center; }
-  .about-left { padding-right: 60px; }
+  .about-grid { display: grid; grid-template-columns: 45% 55%; gap: 40px; align-items: center; }
   .about-left h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(28px, 3vw, 38px); font-weight: 900; color: var(--white); margin-bottom: 6px; letter-spacing: -0.02em; }
   .about-left .subtitle { font-size: 15px; font-weight: 600; color: var(--blue-light); margin-bottom: 28px; text-transform: uppercase; letter-spacing: 1px;}
   .about-left p { color: #E2E8F0; font-size: 16px; font-weight: 500; line-height: 1.75; margin-bottom: 20px; }
@@ -348,20 +346,24 @@
   .footer-text { font-size: 13px; color: #64748b; text-align: center; padding-bottom: 0; }
 
   @media (max-width: 768px) {
-    .main-header { padding: 16px 20px; }
+    .main-header { padding: 12px 20px; }
     .header-center { display: none; }
     
     .cta-row { gap: 8px; }
     .cta-btn { 
-      padding: 14px 20px; 
+      padding: 12px 18px; 
       font-size: 13px; 
       letter-spacing: 1px;
     }
     .cta-btn-large { padding: 14px 20px; }
     
     .features-inner { grid-template-columns: 1fr; gap: 40px; }
-    .about-grid { grid-template-columns: 1fr; gap: 36px; }
-    .about-left { padding-right: 0; }
+    
+    /* REORDERED MOBILE ABOUT SECTION */
+    .about-grid { display: flex; flex-direction: column; gap: 24px; }
+    .about-left { order: 2; padding-right: 0; }
+    .about-right { order: 1; }
+    
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
     .blue-stripe { height: 84px; }
   }
@@ -382,15 +384,15 @@
   </div>
   <div class="header-center">
     <span class="header-green-dot"></span>
-    <span class="header-promo-text">Exclusive 30-days free trial</span>
+    <span class="header-promo-text">Exclusive 45-days free trial</span>
   </div>
   <a href="https://t.me/+qgTfmeQD1uIyN2Nk" target="_blank" class="header-btn">Join Free &rarr;</a>
 </header>
 
 <section class="hero">
   <div class="eyebrow-badge">JOIN NOW · 5,000+ PEOPLE ALREADY INSIDE THE FREE TRADING COMMUNITY</div>
-  <h1 class="hero-headline">The System That Took Me From 9-5 To Financial Freedom<br>Now You Can Learn How For FREE</h1>
-  <p class="hero-sub">Most people spend years stuck at a job they don't love, thinking trading is too complicated, too risky, or just not for them. That was me. I figured it out anyway and built a system so clear, so repeatable, that I'm handing it to you completely free. Whether you've never placed a trade or you've been at it for years without a breakthrough, this is where that changes.</p>
+  <h1 class="hero-headline">I Went From 9-5 To 7 Figures In<br>2 Years Now You Can Learn How For FREE</h1>
+  <p class="hero-sub">Built for beginners who want to start the right way and experienced individuals who want to refine their approach, this is a proven, repeatable system based on the core principles I wish I understood when I was a beginner. It's the same strategy that helped me go from a 9-5 to 7 figures in under 2 years.</p>
 
   <div class="video-wrap">
     <iframe
@@ -402,14 +404,12 @@
   </div>
 
   <div class="cta-row">
-    <span class="chevrons">❯❯</span>
-    <a href="https://t.me/+qgTfmeQD1uIyN2Nk" target="_blank" class="cta-btn">CLAIM YOUR FREE 30-DAY TRIAL NOW</a>
-    <span class="chevrons">❯❯</span>
+    <a href="https://t.me/+qgTfmeQD1uIyN2Nk" target="_blank" class="cta-btn">CLAIM 45-DAY FREE TRIAL NOW</a>
   </div>
 
   <div class="claimed-line">
     <span class="live-dot"></span>
-    <span class="claimed-count">4,800</span>
+    <span class="claimed-count">4,862+</span>
     <div class="avatars">
       <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 1">
       <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 2">
@@ -417,7 +417,7 @@
       <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 4">
       <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 5">
     </div>
-    <span class="claimed-text">/ 5,000 spots claimed</span>
+    <span class="claimed-text">spots already claimed</span>
   </div>
 
   <div class="premium-urgency-card">
@@ -534,6 +534,9 @@
   <div class="about-inner">
     <h2>ABOUT ME</h2>
     <div class="about-grid">
+      <div class="about-right">
+        <img src="TMarz.JPG" alt="T Marz">
+      </div>
       <div class="about-left">
         <h3>T Marz</h3>
         <p class="subtitle">Trader | Entrepreneur | Dubai AE</p>
@@ -541,9 +544,6 @@
         <p>After years of refining his approach, he turned a disciplined, repeatable system into a life most people only dream about — now based in Dubai, trading on his own terms, building businesses, and showing others the exact path he took.</p>
         <p>Today, he leads a community of over 5,000 traders who value real results over hype. No noise. No fluff. Just what works. This free group is where it starts.</p>
         <p class="quote-text">"You can't fail if you never give up."</p>
-      </div>
-      <div class="about-right">
-        <img src="TMarz.JPG" alt="T Marz">
       </div>
     </div>
   </div>
