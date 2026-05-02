@@ -12,7 +12,6 @@
   :root {
     --blue: #2563EB; 
     --blue-light: #3B82F6; 
-    --red: #C0392B;
     --white: #FFFFFF;
     --gray: #AAAAAA; 
     --gray-light: #CCCCCC;
@@ -100,7 +99,8 @@
     transform: translateY(-1px);
   }
 
-  .hero { padding: 70px 20px 60px; text-align: center; }
+  /* --- ADJUSTED PADDING HERE (Changed 70px to 25px) --- */
+  .hero { padding: 25px 20px 60px; text-align: center; }
   .eyebrow-badge { display: inline-block; background: var(--blue); color: var(--white); font-size: 10px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; padding: 7px 14px; margin-bottom: 22px; border-radius: 3px; }
   .hero-headline { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; line-height: 1.16; color: var(--white); max-width: 1000px; margin: 0 auto 22px; letter-spacing: -0.05em; }
   .hero-sub { color: #F5F5F5; font-size: 18px; font-weight: 500; max-width: 900px; margin: 0 auto 40px; line-height: 1.75; }
@@ -274,10 +274,23 @@
   /* INSIGHT */
   .insight-section { padding: 70px 30px 60px; text-align: center; }
   .insight-eyebrow { display: inline-block; background: var(--blue); color: var(--white); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 18px; border-radius: 4px; margin-bottom: 18px; }
-  .section-headline { font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: var(--white); text-transform: uppercase; margin-bottom: 50px; letter-spacing: 0.5px; }
+  .section-headline { font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: var(--white); text-transform: uppercase; margin-bottom: 30px; letter-spacing: 0.5px; }
+  
   .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1160px; margin: 0 auto 50px; }
   .insight-card { background: var(--navy-card); border: 1px solid #1e293b; border-radius: 16px; padding: 40px 24px 36px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; backdrop-filter: blur(5px); }
-  .red-icon-box { width: 62px; height: 62px; background: linear-gradient(145deg, #e03030, #b01e1e); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(192,57,43,0.45); flex-shrink: 0; }
+  
+  .blue-icon-box { 
+    width: 62px; 
+    height: 62px; 
+    background: linear-gradient(145deg, #3B82F6, #2563EB); 
+    border-radius: 14px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 4px 20px rgba(37,99,235,0.45); 
+    flex-shrink: 0; 
+  }
+  
   .insight-card p { font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.45; margin: 0; }
   .insight-social-proof { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
   .insight-social-proof .live-dot2 { width: 8px; height: 8px; background: #e03030; border-radius: 50%; animation: pulse 1.5s infinite; flex-shrink: 0; }
@@ -371,12 +384,12 @@
     <span class="header-green-dot"></span>
     <span class="header-promo-text">Exclusive 30-days free trial</span>
   </div>
-  <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="header-btn">Join Free &rarr;</a>
+  <a href="https://t.me/+qgTfmeQD1uIyN2Nk" target="_blank" class="header-btn">Join Free &rarr;</a>
 </header>
 
 <section class="hero">
   <div class="eyebrow-badge">JOIN NOW · 5,000+ PEOPLE ALREADY INSIDE THE FREE TRADING COMMUNITY</div>
-  <h1 class="hero-headline">The System That Took Me From 9-5 To Financial Freedom<br>Now You Can Learn How I Did It For FREE</h1>
+  <h1 class="hero-headline">The System That Took Me From 9-5 To Financial Freedom<br>Now You Can Learn How For FREE</h1>
   <p class="hero-sub">Most people spend years stuck at a job they don't love, thinking trading is too complicated, too risky, or just not for them. That was me. I figured it out anyway and built a system so clear, so repeatable, that I'm handing it to you completely free. Whether you've never placed a trade or you've been at it for years without a breakthrough, this is where that changes.</p>
 
   <div class="video-wrap">
@@ -390,7 +403,7 @@
 
   <div class="cta-row">
     <span class="chevrons">❯❯</span>
-    <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="cta-btn">CLAIM YOUR FREE 30-DAY TRIAL NOW</a>
+    <a href="https://t.me/+qgTfmeQD1uIyN2Nk" target="_blank" class="cta-btn">CLAIM YOUR FREE 30-DAY TRIAL NOW</a>
     <span class="chevrons">❯❯</span>
   </div>
 
@@ -483,25 +496,25 @@
   <h2 class="section-headline">INSIGHT OF A 7-FIGURE TRADER</h2>
   <div class="cards-grid">
     <div class="insight-card">
-      <div class="red-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+      <div class="blue-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
       <p>My Daily Trades<br>(Copy/Paste Simple)</p>
     </div>
     <div class="insight-card">
-      <div class="red-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <div class="blue-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
       <p>5,000+ Member<br>Support Group</p>
     </div>
     <div class="insight-card">
-      <div class="red-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none"/></svg></div>
+      <div class="blue-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="#fff" stroke="none"/></svg></div>
       <p>Access to Foundational<br>Video Training</p>
     </div>
     <div class="insight-card">
-      <div class="red-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+      <div class="blue-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
       <p>Exclusive Limited 1:1<br>Mentoring Access</p>
     </div>
   </div>
   <div class="cta-row">
     <span class="chevrons" style="font-size:22px;opacity:0.8;">❯❯</span>
-    <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="cta-btn cta-btn-large">CLAIM YOUR FREE 30-DAY TRIAL NOW</a>
+    <a href="https://t.me/+qgTfmeQD1uIyN2Nk" target="_blank" class="cta-btn cta-btn-large">CLAIM YOUR FREE 30-DAY TRIAL NOW</a>
     <span class="chevrons" style="font-size:22px;opacity:0.8;">❮❮</span>
   </div>
   <div class="insight-social-proof">
@@ -542,7 +555,7 @@
     <h2 class="final-headline">IF YOU'RE READY TO MAKE TRADING YOUR BIGGEST SOURCE OF INCOME THIS YEAR...</h2>
     <div class="cta-row">
       <span class="chevrons" style="font-size:22px;opacity:0.8;">❯❯</span>
-      <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="cta-btn cta-btn-large">CLAIM YOUR FREE 30-DAY TRIAL NOW &rarr;</a>
+      <a href="https://t.me/+qgTfmeQD1uIyN2Nk" target="_blank" class="cta-btn cta-btn-large">CLAIM YOUR FREE 30-DAY TRIAL NOW &rarr;</a>
       <span class="chevrons" style="font-size:22px;opacity:0.8;">❮❮</span>
     </div>
     <div class="final-social-proof">
