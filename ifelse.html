@@ -3,125 +3,310 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harry Gunter - Free Trading Community</title>
+<title>T Marz - Free Trading Community</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --gold: #D4A017; --gold-light: #E8B820; --red: #C0392B;
-    --black: #0A0A0A; --dark: #111111; --white: #FFFFFF;
-    --gray: #AAAAAA; --gray-light: #CCCCCC;
+    --blue: #2563EB; 
+    --blue-light: #3B82F6; 
+    --red: #C0392B;
+    --white: #FFFFFF;
+    --gray: #AAAAAA; 
+    --gray-light: #CCCCCC;
+    --navy-dark: #02060d; 
+    --navy-center: #0d1b2a; 
+    --navy-card: rgba(13, 27, 42, 0.6);
   }
+  
   html { scroll-behavior: smooth; }
-  body { background: var(--black); color: var(--white); font-family: 'Inter', 'Plus Jakarta Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+  
+  body { 
+    background: radial-gradient(circle at 50% 20%, var(--navy-center) 0%, var(--navy-dark) 80%); 
+    background-attachment: fixed;
+    color: var(--white); 
+    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif; 
+    font-size: 16px; 
+    line-height: 1.6; 
+    overflow-x: hidden; 
+  }
 
-  .announcement-bar { background: var(--red); text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 800; font-style: italic; letter-spacing: 2px; color: var(--white); text-transform: uppercase; }
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: #020408; 
+    border-bottom: 1px solid #111827;
+  }
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .header-logo-icon {
+    width: 38px;
+    height: 38px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .header-logo-text {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .header-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-green-dot {
+    width: 8px;
+    height: 8px;
+    background: #10B981; 
+    border-radius: 50%;
+  }
+  .header-promo-text {
+    color: #9CA3AF;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .header-btn {
+    background: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .header-btn:hover {
+    background: var(--blue-light);
+    transform: translateY(-1px);
+  }
 
-  .hero { background: var(--black); padding: 70px 20px 60px; text-align: center; }
-  .eyebrow-badge { display: inline-block; background: var(--gold); color: var(--white); font-size: 10px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; padding: 7px 14px; margin-bottom: 22px; border-radius: 3px; }
-  .hero-headline { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: clamp(48px, 4.9vw, 60px); font-weight: 700; line-height: 1.16; color: var(--white); max-width: 1000px; margin: 0 auto 22px; letter-spacing: -0.05em; }
+  .hero { padding: 70px 20px 60px; text-align: center; }
+  .eyebrow-badge { display: inline-block; background: var(--blue); color: var(--white); font-size: 10px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; padding: 7px 14px; margin-bottom: 22px; border-radius: 3px; }
+  .hero-headline { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; line-height: 1.16; color: var(--white); max-width: 1000px; margin: 0 auto 22px; letter-spacing: -0.05em; }
   .hero-sub { color: #F5F5F5; font-size: 18px; font-weight: 500; max-width: 900px; margin: 0 auto 40px; line-height: 1.75; }
 
-  /* ── VIDEO: embed plays in-page ── */
   .video-wrap {
     max-width: 860px;
     margin: 0 auto 40px;
     border-radius: 18px;
     overflow: hidden;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #1e293b;
     position: relative;
     background: #000;
     aspect-ratio: 16/9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
-  .video-wrap iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    border: none;
-    display: block;
+  .video-wrap iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: none; display: block; }
+
+  .cta-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 18px; }
+  .chevrons { color: var(--blue-light); font-size: 18px; font-weight: 700; opacity: 0.65; display: flex; align-items: center;}
+  
+  .cta-btn { 
+    display: inline-block; 
+    background: var(--blue); 
+    color: var(--white); 
+    font-family: 'Inter', sans-serif; 
+    font-size: 15px; 
+    font-weight: 800; 
+    letter-spacing: 1.5px; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+    border: none; 
+    padding: 17px 36px; 
+    cursor: pointer; 
+    transition: background 0.2s, transform 0.15s; 
+    border-radius: 6px; 
+    text-align: center;
+    max-width: 100%;
+    white-space: normal; 
+    line-height: 1.4;
   }
+  .cta-btn:hover { background: var(--blue-light); transform: translateY(-2px); }
+  .cta-btn-large { padding: 18px 48px; }
 
-  .cta-row { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
-  .chevrons { color: var(--gold-light); font-size: 18px; font-weight: 700; opacity: 0.65; }
-  .cta-btn { background: var(--gold); color: var(--white); font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; border: none; padding: 17px 36px; cursor: pointer; transition: background 0.2s, transform 0.15s; white-space: nowrap; border-radius: 6px; }
-  .cta-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-  .claimed-line { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: nowrap; white-space: nowrap; margin: 0 auto 14px; }
+  .claimed-line { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: nowrap; white-space: nowrap; margin: 0 auto 24px; }
   .live-dot { width: 7px; height: 7px; background: #D63B3B; border-radius: 50%; flex-shrink: 0; animation: pulse 1.5s infinite; }
   .claimed-count { font-weight: 900; font-size: 18px; color: var(--white); line-height: 1; flex-shrink: 0; }
   .avatars { display: flex; align-items: center; width: 104px; min-width: 104px; flex: 0 0 104px; overflow: visible; }
-  .avatars img { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #111111; box-shadow: 0 0 0 1px rgba(212,160,23,0.35); object-fit: cover; margin-left: -10px; flex-shrink: 0; }
+  .avatars img { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--navy-dark); box-shadow: 0 0 0 1px rgba(37,99,235,0.35); object-fit: cover; margin-left: -10px; flex-shrink: 0; }
   .avatars img:first-child { margin-left: 0; }
   .claimed-text { font-size: 14px; color: var(--white); line-height: 1; flex-shrink: 0; }
 
-  .scarcity-outer { max-width: 480px; margin: 0 auto; border: 2px solid var(--gold); border-radius: 16px; overflow: hidden; background: #1a1208; }
-  .scarcity-inner { padding: 18px 20px 0; }
-  .scarcity-inner-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; gap: 8px; }
-  .scarcity-label { font-weight: 900; font-size: 15px; color: var(--white); letter-spacing: 0.5px; text-transform: uppercase; }
-  .gone-badge { background: #7a1a1a; color: var(--white); font-size: 13px; font-weight: 800; padding: 6px 14px; border-radius: 6px; white-space: nowrap; }
-  .progress-bar { display: grid; grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 3px; margin-bottom: 10px; border-radius: 4px; overflow: hidden; }
-  .progress-bar span { display: block; height: 28px; border-radius: 3px; background: linear-gradient(180deg, #F5C842 0%, #D4A017 100%); }
-  .progress-bar span.empty { background: #3a3a3a; }
-  .progress-date { font-size: 12px; color: var(--gray); text-align: center; margin-bottom: 12px; }
-  .scarcity-urgency { background: #2a0a0a; border-top: 1px solid #3a1a1a; padding: 12px 20px; text-align: center; font-size: 13px; font-weight: 800; color: #FF6B6B; letter-spacing: 1px; text-transform: uppercase; }
-
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.55; transform: scale(0.82); } }
 
+  /* --- NEW PREMIUM URGENCY COMPONENT --- */
+  .premium-urgency-card {
+    max-width: 480px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, rgba(13, 27, 42, 0.7), rgba(2, 6, 13, 0.9));
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .premium-urgency-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+  .urgency-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .urgency-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .pulse-dot-cyan {
+    width: 8px; height: 8px; 
+    background: #06b6d4; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px #06b6d4; 
+    animation: pulse-cyan 2s infinite;
+  }
+  @keyframes pulse-cyan { 
+    0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); } 
+    70% { box-shadow: 0 0 0 6px rgba(6, 182, 212, 0); } 
+    100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); } 
+  }
+  .urgency-percent {
+    font-size: 18px; 
+    font-weight: 900; 
+    color: #fff;
+    background: linear-gradient(90deg, #ffffff, #94a3b8);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+  }
+  .smooth-progress-container {
+    position: relative; 
+    width: 100%; 
+    height: 10px; 
+    background: #111827;
+    border-radius: 10px; 
+    overflow: hidden; 
+    margin-bottom: 18px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+  }
+  .smooth-progress-bar {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 96%;
+    background: linear-gradient(90deg, var(--blue), #06b6d4);
+    border-radius: 10px;
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  }
+  @keyframes gradientShift { 
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; } 
+    100% { background-position: 0% 50%; } 
+  }
+  .urgency-bottom-row {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding-top: 16px; 
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .spots-warning {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    color: #f87171;
+    font-size: 13.5px; 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .spots-warning svg { stroke: #f87171; }
+  .spots-warning strong { color: #fff; font-size: 15px; font-weight: 800; }
+  .time-updated { font-size: 12px; color: #64748b; font-weight: 500; }
+
   /* FEATURES */
-  .features-section { position: relative; padding: 70px 20px 56px; background: #1a1a1a; overflow: hidden; }
-  .yellow-stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 76px; background: linear-gradient(180deg, rgba(232,184,32,0.98) 0%, rgba(212,160,23,0.98) 100%); z-index: 0; pointer-events: none; }
-  .features-inner { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 38% 62%; gap: 40px; align-items: center; }
+  .features-section { position: relative; padding: 70px 20px 56px; background: rgba(2, 6, 13, 0.5); overflow: hidden; }
+  .blue-stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 76px; background: linear-gradient(180deg, rgba(59,130,246,0.8) 0%, rgba(37,99,235,0.9) 100%); z-index: 0; pointer-events: none; }
+  .features-inner { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 35% 65%; gap: 40px; align-items: center; }
   .features-left { display: flex; flex-direction: column; align-items: flex-start; align-self: start; padding-top: 10px; padding-left: 10px; text-align: left; overflow: visible; min-width: 0; }
   .features-left h2 { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: clamp(22px, 2.2vw, 34px); font-weight: 800; line-height: 1.1; color: var(--white); text-transform: uppercase; margin-bottom: 6px; white-space: nowrap; overflow: visible; }
   .features-left p { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: var(--white); text-transform: uppercase; margin: 0; }
-  .feature-card { background: #2a2a2a; border: 2px solid #D4A017; border-radius: 14px; padding: 30px 28px; position: relative; align-self: center; width: 100%; max-width: 720px; justify-self: end; }
-  .card-free-badge { position: absolute; top: -14px; right: 20px; background: var(--gold); color: var(--white); font-size: 11px; font-weight: 800; letter-spacing: 1px; padding: 5px 14px; border-radius: 20px; }
-  .feature-card h3 { text-align: center; font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 22px; }
-  .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .feature-item { display: flex; gap: 10px; align-items: flex-start; }
+  .feature-card { background: rgba(13, 27, 42, 0.85); border: 2px solid var(--blue); border-radius: 14px; padding: 30px 28px; position: relative; align-self: center; width: 100%; max-width: 800px; justify-self: end; backdrop-filter: blur(10px); }
+  .card-free-badge { position: absolute; top: -14px; right: 20px; background: var(--blue); color: var(--white); font-size: 11px; font-weight: 800; letter-spacing: 1px; padding: 5px 14px; border-radius: 20px; }
+  .feature-card h3 { text-align: center; font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 26px; }
+  .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .feature-item { display: flex; gap: 12px; align-items: flex-start; }
   .feature-item.full-width { grid-column: 1 / -1; max-width: 100%; }
-  .feat-icon { width: 32px; height: 32px; min-width: 32px; background: #F5A623; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 14px; font-weight: 800; }
-  .feature-item p { font-size: 12.5px; color: #FFFFFF; line-height: 1.5; }
-  .feature-item p strong { color: var(--white); font-weight: 800; }
+  .feat-icon { width: 32px; height: 32px; min-width: 32px; background: var(--blue); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 14px; font-weight: 800; margin-top: 2px; }
+  .feature-item p { font-size: 13.5px; color: #E2E8F0; line-height: 1.5; margin: 0;}
+  .feature-item p strong { color: var(--white); font-weight: 800; display: block; margin-bottom: 4px;}
 
   /* INSIGHT */
-  .insight-section { background: #0d0d0d; padding: 70px 30px 60px; text-align: center; }
-  .insight-eyebrow { display: inline-block; background: var(--gold); color: var(--white); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 18px; border-radius: 4px; margin-bottom: 18px; }
-  .section-headline { font-size: clamp(32px, 4vw, 52px); font-weight: 900; color: var(--white); text-transform: uppercase; margin-bottom: 50px; letter-spacing: 0.5px; }
+  .insight-section { padding: 70px 30px 60px; text-align: center; }
+  .insight-eyebrow { display: inline-block; background: var(--blue); color: var(--white); font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 18px; border-radius: 4px; margin-bottom: 18px; }
+  .section-headline { font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: var(--white); text-transform: uppercase; margin-bottom: 50px; letter-spacing: 0.5px; }
   .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1160px; margin: 0 auto 50px; }
-  .insight-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 16px; padding: 40px 24px 36px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; }
+  .insight-card { background: var(--navy-card); border: 1px solid #1e293b; border-radius: 16px; padding: 40px 24px 36px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px; backdrop-filter: blur(5px); }
   .red-icon-box { width: 62px; height: 62px; background: linear-gradient(145deg, #e03030, #b01e1e); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(192,57,43,0.45); flex-shrink: 0; }
   .insight-card p { font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.45; margin: 0; }
   .insight-social-proof { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
   .insight-social-proof .live-dot2 { width: 8px; height: 8px; background: #e03030; border-radius: 50%; animation: pulse 1.5s infinite; flex-shrink: 0; }
   .insight-social-proof .count { font-size: 16px; font-weight: 800; color: var(--white); }
   .insight-social-proof .proof-avatars { display: flex; align-items: center; }
-  .insight-social-proof .proof-avatars img { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #111; margin-left: -8px; object-fit: cover; }
+  .insight-social-proof .proof-avatars img { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--navy-dark); margin-left: -8px; object-fit: cover; }
   .insight-social-proof .proof-avatars img:first-child { margin-left: 0; }
   .insight-social-proof .proof-text { font-size: 14px; color: var(--gray-light); }
 
   /* ABOUT */
-  .about-section { background: var(--black); padding: 80px 0; }
+  .about-section { padding: 80px 0; background: rgba(2, 6, 13, 0.4); }
   .about-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
   .about-inner > h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(40px, 5vw, 62px); font-weight: 900; color: var(--white); text-transform: uppercase; text-align: center; margin-bottom: 60px; letter-spacing: -0.02em; }
   .about-grid { display: grid; grid-template-columns: 45% 55%; gap: 0; align-items: center; }
   .about-left { padding-right: 60px; }
   .about-left h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(28px, 3vw, 38px); font-weight: 900; color: var(--white); margin-bottom: 6px; letter-spacing: -0.02em; }
-  .about-left .subtitle { font-size: 15px; font-weight: 400; color: var(--gray-light); margin-bottom: 28px; }
-  .about-left p { color: var(--white); font-size: 16px; font-weight: 700; line-height: 1.75; margin-bottom: 20px; }
+  .about-left .subtitle { font-size: 15px; font-weight: 600; color: var(--blue-light); margin-bottom: 28px; text-transform: uppercase; letter-spacing: 1px;}
+  .about-left p { color: #E2E8F0; font-size: 16px; font-weight: 500; line-height: 1.75; margin-bottom: 20px; }
   .about-left p:last-child { margin-bottom: 0; }
-  .about-right img { width: 100%; border-radius: 16px; border: 1px solid #2a2a2a; display: block; object-fit: cover; aspect-ratio: 4/3; }
+  .quote-text { font-style: italic; font-weight: bold; border-left: 3px solid var(--blue); padding-left: 15px; color: #fff !important; font-size: 18px !important; margin-top: 30px;}
+  .about-right img { width: 100%; border-radius: 16px; border: 1px solid #1e293b; display: block; object-fit: cover; aspect-ratio: 4/3; }
 
-  /* ── FINAL CTA — full width, no card, covers full screen width and bottom ── */
+  /* FINAL CTA */
   .final-cta-section {
     width: 100%;
-    background: #111111;
+    background: rgba(2, 6, 13, 0.85);
     padding: 80px 20px 70px;
     text-align: center;
-    border-top: 1px solid #1e1e1e;
+    border-top: 1px solid #1e293b;
   }
   .final-cta-inner {
     max-width: 900px;
@@ -129,53 +314,75 @@
   }
   .final-headline {
     font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-    font-size: clamp(28px, 4vw, 52px);
+    font-size: clamp(26px, 4vw, 46px);
     font-weight: 900;
     color: var(--white);
     text-transform: uppercase;
     max-width: 860px;
     margin: 16px auto 36px;
-    line-height: 1.1;
+    line-height: 1.15;
     letter-spacing: -0.02em;
   }
   .final-social-proof { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
   .final-social-proof .live-dot3 { width: 8px; height: 8px; background: #e03030; border-radius: 50%; animation: pulse 1.5s infinite; flex-shrink: 0; }
   .final-social-proof .count { font-size: 16px; font-weight: 800; color: var(--white); }
   .final-social-proof .proof-avatars { display: flex; align-items: center; }
-  .final-social-proof .proof-avatars img { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #111; margin-left: -8px; object-fit: cover; }
+  .final-social-proof .proof-avatars img { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--navy-dark); margin-left: -8px; object-fit: cover; }
   .final-social-proof .proof-avatars img:first-child { margin-left: 0; }
   .final-social-proof .proof-text { font-size: 14px; color: var(--gray-light); }
 
-  .divider { border: none; border-top: 1px solid #2A2A2A; margin: 44px auto 20px; max-width: 700px; }
-  .footer-text { font-size: 13px; color: #555; text-align: center; padding-bottom: 0; }
+  .divider { border: none; border-top: 1px solid #1e293b; margin: 44px auto 20px; max-width: 700px; }
+  .footer-text { font-size: 13px; color: #64748b; text-align: center; padding-bottom: 0; }
 
   @media (max-width: 768px) {
+    .main-header { padding: 16px 20px; }
+    .header-center { display: none; }
+    
+    .cta-row { gap: 8px; }
+    .cta-btn { 
+      padding: 14px 20px; 
+      font-size: 13px; 
+      letter-spacing: 1px;
+    }
+    .cta-btn-large { padding: 14px 20px; }
+    
     .features-inner { grid-template-columns: 1fr; gap: 40px; }
     .about-grid { grid-template-columns: 1fr; gap: 36px; }
     .about-left { padding-right: 0; }
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
-    .yellow-stripe { height: 84px; }
+    .blue-stripe { height: 84px; }
   }
   @media (max-width: 480px) {
     .features-grid { grid-template-columns: 1fr; }
     .cards-grid { grid-template-columns: 1fr; }
+    .urgency-top-row { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .urgency-bottom-row { flex-direction: column; gap: 12px; align-items: flex-start; }
   }
 </style>
 </head>
 <body>
 
-<div class="announcement-bar">⚡ EXCLUSIVE 30-DAYS FREE TRIAL ⚡</div>
+<header class="main-header">
+  <div class="header-logo">
+    <div class="header-logo-icon">T</div>
+    <span class="header-logo-text">TMARZ</span>
+  </div>
+  <div class="header-center">
+    <span class="header-green-dot"></span>
+    <span class="header-promo-text">Exclusive 30-days free trial</span>
+  </div>
+  <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="header-btn">Join Free &rarr;</a>
+</header>
 
 <section class="hero">
   <div class="eyebrow-badge">JOIN NOW · 5,000+ PEOPLE ALREADY INSIDE THE FREE TRADING COMMUNITY</div>
-  <h1 class="hero-headline">I Went From 9-5 To 7 Figures In 2 Years Now<br>You Can Learn How For FREE</h1>
-  <p class="hero-sub">Built for beginners who want to start the right way and experienced individuals who want to refine their approach, this is a proven, repeatable system based on the core principles I wish I understood when I was a beginner. It's the same strategy that helped me go from a 9-5 to 7 figures in under 2 years.</p>
+  <h1 class="hero-headline">The System That Took Me From 9-5 To Financial Freedom<br>Now You Can Learn How I Did It For FREE</h1>
+  <p class="hero-sub">Most people spend years stuck at a job they don't love, thinking trading is too complicated, too risky, or just not for them. That was me. I figured it out anyway and built a system so clear, so repeatable, that I'm handing it to you completely free. Whether you've never placed a trade or you've been at it for years without a breakthrough, this is where that changes.</p>
 
-  <!-- YouTube embed: plays in-page, does NOT redirect to YouTube -->
   <div class="video-wrap">
     <iframe
       src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-      title="Harry Gunter - Trading Community"
+      title="T Marz - Trading Community"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -183,13 +390,13 @@
 
   <div class="cta-row">
     <span class="chevrons">❯❯</span>
-    <button class="cta-btn">CLAIM 30-DAY FREE TRIAL NOW</button>
+    <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="cta-btn">CLAIM YOUR FREE 30-DAY TRIAL NOW</a>
     <span class="chevrons">❯❯</span>
   </div>
 
   <div class="claimed-line">
     <span class="live-dot"></span>
-    <span class="claimed-count">4700+</span>
+    <span class="claimed-count">4,800</span>
     <div class="avatars">
       <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 1">
       <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 2">
@@ -197,33 +404,42 @@
       <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 4">
       <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=80" alt="Member 5">
     </div>
-    <span class="claimed-text">spots already claimed</span>
+    <span class="claimed-text">/ 5,000 spots claimed</span>
   </div>
 
-  <div class="scarcity-outer">
-    <div class="scarcity-inner">
-      <div class="scarcity-inner-top">
-        <span class="scarcity-label">🔥 FREE TRIAL SPOTS</span>
-        <span class="gone-badge">95% Gone</span>
+  <div class="premium-urgency-card">
+    <div class="urgency-top-row">
+      <div class="urgency-title">
+        <span class="pulse-dot-cyan"></span>
+        Registration Closing Soon
       </div>
-      <div class="progress-bar">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span class="empty"></span>
-      </div>
-      <p class="progress-date">As of Friday, 1 May 2026</p>
+      <div class="urgency-percent">96% Claimed</div>
     </div>
-    <div class="scarcity-urgency">⚠ ONLY 5% OF SPOTS REMAINING — ACT NOW!</div>
+    
+    <div class="smooth-progress-container">
+      <div class="smooth-progress-bar"></div>
+    </div>
+    
+    <div class="urgency-bottom-row">
+      <div class="spots-warning">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+        <span>Only <strong>200</strong> spots left</span>
+      </div>
+      <div class="time-updated">Verified • As of Today</div>
+    </div>
   </div>
 </section>
 
 <section class="features-section">
-  <div class="yellow-stripe"></div>
+  <div class="blue-stripe"></div>
   <div class="features-inner">
     <div class="features-left">
-      <h2>WHAT YOU WILL GET :</h2>
-      <p>CLAIM LIMITED FREE SPOT!</p>
+      <h2>WHAT YOU WILL GET</h2>
+      <p>Claim your limited free spot!</p>
     </div>
     <div class="feature-card">
       <div class="card-free-badge">100% FREE</div>
@@ -231,31 +447,31 @@
       <div class="features-grid">
         <div class="feature-item">
           <div class="feat-icon">↗</div>
-          <p><strong>Get access to the step-by-step breakdown</strong> I wish I had when I started.</p>
+          <p><strong>Step-by-step Breakdown</strong> The exact process TMarz used to go from a 9-5 to full financial freedom.</p>
         </div>
         <div class="feature-item">
           <div class="feat-icon">ƒ</div>
-          <p><strong>Learn the fundamentals of trading</strong> without the fluff, gatekeeping or fake gurus.</p>
+          <p><strong>Real Fundamentals</strong> Taught straight - no fluff, no gatekeeping, no gurus selling dreams.</p>
         </div>
         <div class="feature-item">
           <div class="feat-icon">◉</div>
-          <p><strong>Designed for beginners</strong> who want a clear, proven path.</p>
+          <p><strong>Designed for Everyone</strong> Built for complete beginners but highly useful for everyone.</p>
         </div>
         <div class="feature-item">
           <div class="feat-icon">▣</div>
-          <p><strong>A starter pack</strong> to cover the basics.</p>
+          <p><strong>A Starter Pack</strong> Everything required to get you moving and trading from day one.</p>
         </div>
         <div class="feature-item">
           <div class="feat-icon">◆</div>
-          <p><strong>Built for experienced traders</strong> who value precision and logic.</p>
+          <p><strong>My Daily Trades</strong> Every setup, entry, and reason. Follow along copy/paste simple or go deep on technicals.</p>
         </div>
         <div class="feature-item">
           <div class="feat-icon">⚙</div>
-          <p><strong>Set Up Support</strong></p>
+          <p><strong>1:1 Mentoring Access</strong> Direct access to TMarz. Limited spots for those serious about moving fast.</p>
         </div>
         <div class="feature-item full-width">
           <div class="feat-icon">✓</div>
-          <p><strong>24/7 Support Team</strong></p>
+          <p><strong>24/7 Support Team</strong> Someone's always on. No question left unanswered in our active daily community.</p>
         </div>
       </div>
     </div>
@@ -264,15 +480,15 @@
 
 <section class="insight-section">
   <div class="insight-eyebrow">LEARN HOW AND WHY</div>
-  <h2 class="section-headline">INSIGHT OF A 7FIG TRADER</h2>
+  <h2 class="section-headline">INSIGHT OF A 7-FIGURE TRADER</h2>
   <div class="cards-grid">
     <div class="insight-card">
       <div class="red-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-      <p>My Daily Trades<br>(copy/paste simple)</p>
+      <p>My Daily Trades<br>(Copy/Paste Simple)</p>
     </div>
     <div class="insight-card">
       <div class="red-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-      <p>5,000+ Members<br>Support Group</p>
+      <p>5,000+ Member<br>Support Group</p>
     </div>
     <div class="insight-card">
       <div class="red-icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none"/></svg></div>
@@ -285,19 +501,19 @@
   </div>
   <div class="cta-row">
     <span class="chevrons" style="font-size:22px;opacity:0.8;">❯❯</span>
-    <button class="cta-btn" style="padding:18px 48px;font-size:15px;">CLAIM 30-DAY FREE TRIAL NOW</button>
+    <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="cta-btn cta-btn-large">CLAIM YOUR FREE 30-DAY TRIAL NOW</a>
     <span class="chevrons" style="font-size:22px;opacity:0.8;">❮❮</span>
   </div>
   <div class="insight-social-proof">
     <span class="live-dot2"></span>
-    <span class="count">4700+</span>
+    <span class="count">4,800</span>
     <div class="proof-avatars">
       <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=60&h=60&q=80" alt="m1">
       <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=60&h=60&q=80" alt="m2">
       <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=60&h=60&q=80" alt="m3">
       <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=60&h=60&q=80" alt="m4">
     </div>
-    <span class="proof-text">spots already claimed</span>
+    <span class="proof-text">/ 5,000 spots claimed</span>
   </div>
 </section>
 
@@ -306,42 +522,42 @@
     <h2>ABOUT ME</h2>
     <div class="about-grid">
       <div class="about-left">
-        <h3>Harry Gunter</h3>
-        <p class="subtitle">Co Founder of Premium Members</p>
-        <p>Harry Gunter is a multi 7-figure trader, entrepreneur, and mentor known for helping everyday people break out of the 9–5 and build real skill through trading.</p>
-        <p>After years of refining his process, he's built multiple successful businesses and a reputation for turning complexity into clarity — making trading simple, structured, and scalable.</p>
-        <p>Today, he leads a growing community of traders who value discipline, direct support, and results over hype. This free group is where that journey begins — with the same principles that helped Harry build true financial freedom from the ground up.</p>
+        <h3>T Marz</h3>
+        <p class="subtitle">Trader | Entrepreneur | Dubai AE</p>
+        <p>T Marz is a 7-figure trader, entrepreneur, and mentor known for helping everyday people escape the 9-5 grind and build real income through trading.</p>
+        <p>After years of refining his approach, he turned a disciplined, repeatable system into a life most people only dream about — now based in Dubai, trading on his own terms, building businesses, and showing others the exact path he took.</p>
+        <p>Today, he leads a community of over 5,000 traders who value real results over hype. No noise. No fluff. Just what works. This free group is where it starts.</p>
+        <p class="quote-text">"You can't fail if you never give up."</p>
       </div>
       <div class="about-right">
-        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=80" alt="Harry Gunter">
+        <img src="TMarz.JPG" alt="T Marz">
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA — full width, no rounded card, fills screen edge to edge -->
 <section class="final-cta-section">
   <div class="final-cta-inner">
     <div class="eyebrow-badge">FREE 30-DAY TRIAL</div>
-    <h2 class="final-headline">IF YOU'RE READY TO TURN TRADING INTO YOUR BIGGEST SOURCE OF INCOME THIS YEAR...</h2>
+    <h2 class="final-headline">IF YOU'RE READY TO MAKE TRADING YOUR BIGGEST SOURCE OF INCOME THIS YEAR...</h2>
     <div class="cta-row">
       <span class="chevrons" style="font-size:22px;opacity:0.8;">❯❯</span>
-      <button class="cta-btn" style="padding:18px 48px;font-size:15px;min-width:320px;">CLAIM 30-DAY FREE TRIAL NOW</button>
+      <a href="https://t.me/+h1SKShE8DqcwM2MO" target="_blank" class="cta-btn cta-btn-large">CLAIM YOUR FREE 30-DAY TRIAL NOW &rarr;</a>
       <span class="chevrons" style="font-size:22px;opacity:0.8;">❮❮</span>
     </div>
     <div class="final-social-proof">
       <span class="live-dot3"></span>
-      <span class="count">4700+</span>
+      <span class="count">4,800</span>
       <div class="proof-avatars">
         <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=60&h=60&q=80" alt="m1">
         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=60&h=60&q=80" alt="m2">
         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=60&h=60&q=80" alt="m3">
         <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=60&h=60&q=80" alt="m4">
       </div>
-      <span class="proof-text">spots already claimed</span>
+      <span class="proof-text">/ 5,000 spots claimed</span>
     </div>
     <hr class="divider">
-    <p class="footer-text">© 2026 All Right Reserved</p>
+    <p class="footer-text">© 2026 T Marz. All Rights Reserved.</p>
   </div>
 </section>
 
